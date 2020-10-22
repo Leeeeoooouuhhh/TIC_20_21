@@ -1,2 +1,2 @@
 # TIC_20_21
-Programas que estamos practicando
+Road to Dios informático
