@@ -3,7 +3,7 @@ R Resta
 M Multiplica
 D Divide'''
 def menu():
-    print"Introduce dos números enteros"
+    print"Introduce dos nÃºmeros enteros"
     numero1=input("numero 1= ")
     interruptora=1
     while(interruptora==1):
