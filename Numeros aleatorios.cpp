@@ -1,6 +1,15 @@
 /*
-Números aleatorios
 
+Haz un juego en el que compites con el ordenador. TReglas:
+1. Se tira el dado(n aleatorio) 3 veces de forma consecutiva
+> TURNO 1. ORDENADOR (presiona cualquier tecla para tirar el dado)
+> 4
+> TURNO 1. PLAYER H (presiona cualquier tecla para tirar el dado)
+> 3
+> Gana el ordenador ;)
+> TURNO 2.
+Al final se dan todos los resultados parciales, la suma de los puntos
+y se proclama el ganador.
 */
 #include<stdio.h>
 #include<stdlib.h>

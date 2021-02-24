@@ -21,23 +21,51 @@ int tirada(){
 	puntuacion=rand()%6+1;
 	return(puntuacion);
 }
+void escribe_ganador(int puntuacion_1,int puntuacion_2){
+	if(puntuacion_1 > puntuacion_2)
+		printf("\nORDENADOR WINS");
+	else
+		if(puntuacion_1 < puntuacion_2)
+			printf("\nJUGADOR WINS");
+		else
+			printf("\nJUGADOR Y ORDENADOR EMPATAN");
+	
+}
 
 int main(){
 	int cont;
 	int marcador1[3];
 	int marcador2[3];
 	char tecla;
-	for(cont=1;cont<3;cont++){
-		printf("\nTURNO 1. ORDENADOR. Presiona cualquier tecla: ");
+	int total1=0;
+	int total2=0;
+	for(cont=0;cont<3;cont++){
+		printf("\nTURNO %d. ORDENADOR. Presiona cualquier tecla: ",cont+1);
 		scanf("%c",&tecla);
 		marcador1[cont]=tirada();
 		printf("%d",marcador1[cont]);
 		//TURNO JUGADOR
-		printf("\nTURNO %d. JUGADOR. Presiona cualquier tecla: ");
+		printf("\nTURNO %d. JUGADOR. Presiona cualquier tecla: ",cont+1);
 		scanf("%c",&tecla);
 		marcador2[cont]=tirada();
-		printf("%d",marcador2[cont]);
-		
+		printf(" %d",marcador2[cont]);
+		escribe_ganador(marcador1[cont],marcador2[cont]);
 	}
+	//RESULTADOS
+	printf("\n******************************************");
+	printf("\n*               PUNTUACIONES             *");
+	printf("\n******************************************");
+	printf("\n*        JUGADOR         ORDENADOR       *");
+	for(cont=0;cont<3;cont++){
+		printf("\n* TURNO %d      %d                 %d       *",cont+1,marcador1[cont],marcador2[cont]);
+		total1=total1+marcador1[cont];
+		total2=total2+marcador2[cont];
+	}
+	printf("\n******************************************");
+	printf("\n* TOTAL       %d                %d       *",total1,total2);
+	printf("\n******************************************");
+	printf("\n*******SE***ACABO****CIERRA***************");
+	printf("\n******EL***PUTO*****PROGRAMA**************");
+	printf("\n**************GRACIAS*********************");
 	return 0;
 }
